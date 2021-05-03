@@ -161,6 +161,7 @@ cartItems.delete("/cart-items/:id", (req, res)=>{
     res.json()
 })
 
+//Randomly generate a random id when post 
 function generateUID(){
     let id = Math.random().toString().slice(2,11);
     if(items.findIndex(product => product.id == id) === -1){
